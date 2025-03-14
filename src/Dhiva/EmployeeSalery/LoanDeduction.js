@@ -17,15 +17,16 @@ const LoanDeduction = () => {
 ]
 
 const AdditionalSalary = 2000;
-const loanDeduction = 2500;
+const loan = 2500;
 
 const calculateSalary = (daysWorked , salary , hasloan) => {
-     const totalSalary = daysWorked * salary;
-     const pf = totalSalary * (1.5 /100);
-     const tdf = totalSalary * (2/100);
-     const AdditionalPayment = daysWorked >= 20 ? AdditionalSalary : 0 ;
-     const takeHomeSalary = totalSalary - (pf + tdf) - (hasloan ? loanDeduction : 0) + AdditionalPayment; 
-     return{totalSalary ,takeHomeSalary , pf ,tdf , AdditionalPayment, hasloan}
+    const totalSalary = daysWorked * salary;
+    const pf = totalSalary*(1.5 / 100);
+    const tdf = totalSalary*(1.2 /100);
+    const AdditionalPayment = daysWorked >= 20 ? AdditionalSalary : 0 ;
+    const loanDeduction = hasloan ? loan : 0;
+    const takeHomeSalary = totalSalary - (pf+tdf) -loanDeduction + AdditionalPayment;
+    return{totalSalary,pf,tdf,AdditionalPayment,loanDeduction,takeHomeSalary}
 }
   return (
     <div>
@@ -47,18 +48,18 @@ const calculateSalary = (daysWorked , salary , hasloan) => {
         </thead>
         <tbody>
           {Employees.map((emp,index)=>{
-            const {totalSalary ,takeHomeSalary , pf ,tdf , AdditionalPayment, hasloan} = calculateSalary(emp.daysWorked ,emp.salary ,emp.hasloan)
+            const {totalSalary,pf,tdf,AdditionalPayment,loanDeduction,takeHomeSalary} = calculateSalary(emp.daysWorked ,emp.salary ,emp.hasloan)
             return(
-              <tr>
+              <tr key={index}>
                 <td>{emp.name}</td>
                 <td>{emp.salary}</td>
                 <td>{emp.daysWorked}</td>
                 <td>{totalSalary}</td>
-                <td>{pf}</td>
-                <td>{tdf}</td>
+                <td>{Math.floor(pf)}</td>
+                <td>{Math.floor(tdf)}</td>
                 <td>{AdditionalPayment}</td>
-                <td>{hasloan ? loanDeduction : 0}</td>
-                <td>{takeHomeSalary}</td>
+                <td>{loanDeduction}</td>
+                <td>{Math.floor(takeHomeSalary)}</td>
               </tr>
             )
           })}

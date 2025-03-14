@@ -20,7 +20,6 @@ const Employee = () => {
     const foodCoupon = 500;
 
     const calculateSalary = (daysworked, salery) => {
-        const perDaySalary = salery;
         const totalSalary = daysworked * salery;
         const pf = totalSalary * pfRate;
         const tds = totalSalary * tdfRate;

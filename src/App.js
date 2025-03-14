@@ -32,6 +32,8 @@ import Employee from './Dhiva/EmployeeSalery/Employee';
 import BudgetSalary from './Dhiva/EmployeeSalery/BudgetSalary';
 import LoanDeduction from './Dhiva/EmployeeSalery/LoanDeduction';
 import TaxDedutions from './Dhiva/EmployeeSalery/TaxDedutions';
+import Interview from './Dhiva/EmployeeSalery/Interview';
+import LoanCalculate from './Dhiva/EmployeeSalery/LoanCalculate';
 
 function App() {
   return (
@@ -59,6 +61,8 @@ function App() {
  <Route path='/budget' element={<BudgetSalary/>}/>
  <Route path='/loan' element={<LoanDeduction/>}/>
  <Route path='/tax' element={<TaxDedutions/>}/>
+ <Route path='/inter' element={<Interview/>}/>
+ <Route path='loanCal' element={<LoanCalculate/>}/>
   {/* <Route path='/abc' element={<UseEffect/>}/>
  
   <Route path='/' element={<SignInEvent/>}/>

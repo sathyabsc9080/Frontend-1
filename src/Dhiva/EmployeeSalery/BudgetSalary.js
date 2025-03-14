@@ -24,7 +24,7 @@ const BudgetSalary = () => {
     return{totalSalary , pf ,tdf , takeHomeSalary};
   }
   return (
-    <div className='text-center '>
+    <div className='text-center justify-center'>
       <h1 className='font-bold font-serif text-2xl'>budget salary and Employees</h1>
       <table className='border-solid font-bold font-serif text-xl'>
         <thead>
