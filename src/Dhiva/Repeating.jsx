@@ -15,7 +15,7 @@ const findNthNonRepeatingLetter = (letters, n) => {
  
 console.log(findNthNonRepeatingLetter(letters, 2)); 
 
-    // Repeating letters...
+//     Repeating letters...
 
 // const letters = ['a', 'b', 'c', 'd', 'e', 'a', 'b', 'c', 'd', 'c', 'd', 'e', 'a', 'b', 'c', 'f', 'g', 'h'];
 
@@ -27,7 +27,7 @@ console.log(findNthNonRepeatingLetter(letters, 2));
 
 // console.log( Repeating letters :"letterCount)
 
-     // Non Repeating letters...
+//      Non Repeating letters...
 
 // const letters = ['a', 'b', 'c', 'd', 'e', 'a', 'b', 'c', 'd', 'c', 'd', 'e', 'a', 'b', 'c', 'f', 'g', 'h'];
 
