@@ -34,6 +34,9 @@ import LoanDeduction from './Dhiva/EmployeeSalery/LoanDeduction';
 import TaxDedutions from './Dhiva/EmployeeSalery/TaxDedutions';
 import Interview from './Dhiva/EmployeeSalery/Interview';
 import LoanCalculate from './Dhiva/EmployeeSalery/LoanCalculate';
+import Palindrome from './Praveen/ReactJSX/Palindrome';
+import PalindromeChecker from "./sathya/PalindromeChecker";
+
 
 function App() {
   return (
@@ -63,6 +66,8 @@ function App() {
  <Route path='/tax' element={<TaxDedutions/>}/>
  <Route path='/inter' element={<Interview/>}/>
  <Route path='loanCal' element={<LoanCalculate/>}/>
+   <Route path='/palin' element={<Palindrome/>}/>
+      <Route path='/pali' element={< PalindromeChecker/>}/>
   {/* <Route path='/abc' element={<UseEffect/>}/>
  
   <Route path='/' element={<SignInEvent/>}/>
