@@ -36,6 +36,7 @@ import Interview from './Dhiva/EmployeeSalery/Interview';
 import LoanCalculate from './Dhiva/EmployeeSalery/LoanCalculate';
 import Palindrome from './Praveen/ReactJSX/Palindrome';
 import PalindromeChecker from "./sathya/PalindromeChecker";
+import PersonInfo from './sathya/PersonInfo';
 
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
  <Route path='loanCal' element={<LoanCalculate/>}/>
    <Route path='/palin' element={<Palindrome/>}/>
       <Route path='/pali' element={< PalindromeChecker/>}/>
+  <Route path='/person' element={< PersonInfo/>}/>
   {/* <Route path='/abc' element={<UseEffect/>}/>
  
   <Route path='/' element={<SignInEvent/>}/>
