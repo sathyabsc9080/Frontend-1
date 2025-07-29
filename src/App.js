@@ -37,7 +37,10 @@ import LoanCalculate from './Dhiva/EmployeeSalery/LoanCalculate';
 import Palindrome from './Praveen/ReactJSX/Palindrome';
 import PalindromeChecker from "./sathya/PalindromeChecker";
 import PersonInfo from './sathya/PersonInfo';
-
+import ArrayOperation from './sathya/ArrayOperation';
+import SquareRootCalculator from'./sathya/SquareRootCalculator';
+import TriangleAreaCalculator from'./sathya/TriangleAreaCalculator';
+import VirtualDom from './sathya/VirtualDom';
 
 function App() {
   return (
@@ -70,6 +73,10 @@ function App() {
    <Route path='/palin' element={<Palindrome/>}/>
       <Route path='/pali' element={< PalindromeChecker/>}/>
   <Route path='/person' element={< PersonInfo/>}/>
+  <Route path='/arrayoper' element={<ArrayOperation/>}/>
+   <Route path='/square' element={<SquareRootCalculator/>}/>
+   <Route path='/triangle' element={< TriangleAreaCalculator/>}/>
+   <Route path='/virtual' element={<VirtualDom/>}/>
   {/* <Route path='/abc' element={<UseEffect/>}/>
  
   <Route path='/' element={<SignInEvent/>}/>

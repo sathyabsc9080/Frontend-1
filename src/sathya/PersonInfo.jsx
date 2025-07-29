@@ -32,7 +32,7 @@ const PersonInfo = () => {
       <button  onClick={updateAge} style={{ marginRight: "10px" , fontSize:"20px",fontFamily:"20px",color:"green" }}>
         Update Age 
       </button><br/>
-      <button onClick={addOccupation} style={{ marginRight: "10px" , fontSize:"20px",fontFamily:"20px",color:"orange" }}>
+      <button onClick={addOccupation} style={{ marginRight: "10px" , fontSize:"20px",fontFamily:"20px",color:"green" }}>
         Add Occupation
       </button>
     </div>
