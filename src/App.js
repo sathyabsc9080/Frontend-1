@@ -34,6 +34,9 @@ import LoanDeduction from './Dhiva/EmployeeSalery/LoanDeduction';
 import TaxDedutions from './Dhiva/EmployeeSalery/TaxDedutions';
 import Interview from './Dhiva/EmployeeSalery/Interview';
 import LoanCalculate from './Dhiva/EmployeeSalery/LoanCalculate';
+import UseState1 from './Component/UseState1';
+import MyComponent from './Component/MyComponent';
+import MyComponent2 from './Component/MyComponent2';
 
 function App() {
   return (
@@ -50,7 +53,7 @@ function App() {
  <Route path='/decreament' element={<Decreament/>}/>
  <Route path='/oddnumber' element={<OddNumber/>}/>
  <Route path='/evennumbers' element={<EvenNumber/>}/>
- <Route path='/usestate' element={<UseState/>}/>
+ <Route path='/usestate' element={<UseState1/>}/>
  {/* <Route path='/useEffect' element={<UseEffect/>}/> */}
  <Route path='/api' element={<ApiCall/>}/>
  <Route path='/main' element={<Main/>}/>
@@ -63,19 +66,23 @@ function App() {
  <Route path='/tax' element={<TaxDedutions/>}/>
  <Route path='/inter' element={<Interview/>}/>
  <Route path='loanCal' element={<LoanCalculate/>}/>
+ <Route path='/fun' element={<FunctionComponent/>}/>
+ <Route path='/class' element={<ClassComponent/>}/>
+   <Route path='/abi' element={<LifeCycle/>}/> 
+  <Route path='/my' element={<MyComponent2/>}/>
+
   {/* <Route path='/abc' element={<UseEffect/>}/>
  
   <Route path='/' element={<SignInEvent/>}/>
   <Route path='/abcd' element={<AbC/>}/>
-  <Route path='/fun' element={<FunctionComponent/>}/>
+  
   <Route path='/forms' element={<Forms/>}/>
   <Route path='/palin' element={<Palindrome/>}/>
   <Route path='Fib' element={<Fibonaccai/>}/> 
-  <Route path='/class' element={<ClassComponent/>}/>
+  
   <Route path='/john' element={<DigitalClock/>}/>
   <Route path='/function' element={<FunctionComponent/>}/>
   <Route path='/form' element={<From1/>}/>
-  <Route path='/abi' element={<LifeCycle/>}/> 
   <Route path='/abc' element ={<Abc/>}/>
 
   {/* <Route path='/forms' element={<Forms/>}/> */}

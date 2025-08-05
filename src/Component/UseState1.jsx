@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react'
 
-const UseState = () => {
+const UseState1 = () => {
 
 
  const[colour , setColour] = useState(" violet ")  // 2 functionalities 1---- state  2---- update state
@@ -18,9 +18,9 @@ const UseState = () => {
   )
 }
 
-export default UseState
+export default UseState1
 
 
-// hook techniques 
+// hook techniques========Functional component 
 // useState, useEffect, useReduer, useCallback, useMemo, useRef, custom hook.....
 //  (1+2=3) ? true : false

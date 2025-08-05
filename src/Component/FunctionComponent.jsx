@@ -6,45 +6,54 @@ import React, { useEffect, useState } from 'react'
 
 const FunctionComponent = () => {
 
-  const[number, setNumber]= useState(0); //initiate const , let, var keyword
+  const[ball, setball] = useState(200);//initiate const , let, var keyword
 const [count, setCount ] = useState();
 
 
    useEffect(()=>{ //hook
-    console.log("Checkball",checkBall);
+   // console.log("Checkball",checkBall);
    
     checkBall();
-   },[]);
+   },[ball]);
 
+   
    function checkBall(){
-    if(number>100){ //   condition
-  setNumber(0); //  updating state
+    if(ball>=0){ //   condition
+  setball(200); //  updating state
     }}
 
 function updateNumber(){
-  setNumber((prevstate)=>
-  {return prevstate + 10})
+  
+  setball((prevstate)=>
+  {return prevstate -10})
 }
-function numbers(){
-  setNumber((prevstate)=>
-  {return prevstate * 2})
-};
+
+
+
+//in  return part CSS and Mapping
   return (
     <div>
 
-      <h1 style={{fontSize:"40px", color:"violet" }}>
-        I am going to count the number of balls : {number}
-      </h1>
-      <button size="lg "style={{color :"red", fontSize:"20px" }}
 
-onClick={ updateNumber}> add the ball
-onChange // ..............onchange
-      </button>
+      <h1 style={{fontSize:"40px", color:"violet" }}>
+        I am going to count the number of balls : {ball}
+      </h1>
+      
+      <button size="lg "style={{color :"red", fontSize:"20px" }}
+onClick={ updateNumber}> 
+add the ball
+  </button>
+
+
     </div>
   )
 }
 
 export default FunctionComponent
+
+
+
+
 /** HOOK TECHNIQUES
  * useEffect
  * useState
@@ -58,14 +67,22 @@ export default FunctionComponent
  */
 /*
 
-Const test =()=>{
-  
 
 
+const [] = useState(); // hook,    initiate, update
+
+
+
+
+const test = () => {
+
+//logic
 
   return(
   
-  
+  <div>
+  css part
+  </div>
   
   )
   

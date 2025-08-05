@@ -56,7 +56,7 @@ export default LifeCycle;
 render {return}
 important=========lifecycle[ componentDidMount, componentDidUpdate,componentWillUnmount]..............
 
-
+Mount, update, unmount
 
  componentdidMount  ======   constructor,  render, didmount
 

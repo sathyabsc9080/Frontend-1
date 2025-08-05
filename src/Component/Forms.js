@@ -1,58 +1,51 @@
-import React, { useState, useInput } from 'react';
+
+import React, { useState } from 'react';
+import useInput from '../UseInput'; // Adjust the path if needed
+
 
 function Forms() {
-  const [formData, setFormData] = useState({
-    username: '',
-    password: ''
-  });
- // const [userName,bindUserName,resetUserName] = useInput(" ");
+  const [password, setPassword] = useState('');
+  const [userName, bindUserName, resetUserName] = useInput('');
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
   };
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Do something with the form data, like submitting to a server
-    // console.log(formData);
+    // Example: console.log({ username: userName, password });
+    resetUserName();
+    setPassword('');
   };
 
   return (
-     <form onSubmit={handleSubmit}> 
-     
+    <form onSubmit={handleSubmit}>
+      <br />
+      <label>
+        UserName:
+        <input
+          type="text"
+          name="username"
+          {...bindUserName}
+        />
+      </label>
       <br />
       <label>
         Password:
         <input
           type="password"
           name="password"
-          value={formData.password}
-          onChange={handleInputChange}
-        />
-      </label>
-      <label>
-      UserName:
-        <input
-          type="text"
-          name="username"
-          value={formData.username}
-          onChange={handleInputChange}
+          value={password}
+          onChange={handlePasswordChange}
         />
       </label>
       <br />
-      <button type="submit" onSubmit={{handleSubmit}}>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   );
 }
 
 export default Forms;
- // <label>
-      //   Username:
-      //   <input
-      //     type="text"
-      //     name="username"
-      //   {...bindUserName}
-      //     onChange={handleInputChange}
-      //   />
-      // </label>
