@@ -41,6 +41,9 @@ import ArrayOperation from './sathya/ArrayOperation';
 import SquareRootCalculator from'./sathya/SquareRootCalculator';
 import TriangleAreaCalculator from'./sathya/TriangleAreaCalculator';
 import VirtualDom from './sathya/VirtualDom';
+import ControlledInput from './sathya/ControlledInput';
+import UncontrolledInput from './sathya/UncontrolledInput';
+import CustomHook from './sathya/CustomHook';
 
 function App() {
   return (
@@ -77,6 +80,9 @@ function App() {
    <Route path='/square' element={<SquareRootCalculator/>}/>
    <Route path='/triangle' element={< TriangleAreaCalculator/>}/>
    <Route path='/virtual' element={<VirtualDom/>}/>
+   <Route path='/control' element={<ControlledInput/>}/>
+   <Route path='/uncontrol' element={< UncontrolledInput/>}/>
+   <Route path='/custom' element={< CustomHook/>}/>
   {/* <Route path='/abc' element={<UseEffect/>}/>
  
   <Route path='/' element={<SignInEvent/>}/>
