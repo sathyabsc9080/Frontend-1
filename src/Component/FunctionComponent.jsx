@@ -3,6 +3,7 @@
 Hooks techniques
 */
 import React, { useEffect, useState } from 'react'
+import Propsss from './Propsss';
 
 const FunctionComponent = () => {
 
@@ -34,7 +35,7 @@ function updateNumber(){
   return (
     <div>
 
-
+   <Propsss ball={ball} />
       <h1 style={{fontSize:"40px", color:"violet" }}>
         I am going to count the number of balls : {ball}
       </h1>
@@ -45,6 +46,7 @@ add the ball
   </button>
 
 
+   
     </div>
   )
 }

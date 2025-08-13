@@ -37,6 +37,10 @@ import LoanCalculate from './Dhiva/EmployeeSalery/LoanCalculate';
 import UseState1 from './Component/UseState1';
 import MyComponent from './Component/MyComponent';
 import MyComponent2 from './Component/MyComponent2';
+import Propss from './Component/Propsss';
+import Propsss from './Component/Propsss';
+import Login from './Component/Login';
+import Logic from './Component/Logic';
 
 function App() {
   return (
@@ -70,6 +74,12 @@ function App() {
  <Route path='/class' element={<ClassComponent/>}/>
    <Route path='/abi' element={<LifeCycle/>}/> 
   <Route path='/my' element={<MyComponent2/>}/>
+  <Route path='/propss' element={<Propsss/>}/>
+  <Route path='/mycom' element={<MyComponent/>}/>
+  <Route path='/forms' element={<Forms/>}/>
+    <Route path='/login' element={<Login/>}/>
+  <Route path='/logic' element={<Logic/>}/>
+
 
   {/* <Route path='/abc' element={<UseEffect/>}/>
  
@@ -89,9 +99,9 @@ function App() {
 
  </Routes>
  </BrowserRouter> 
- {/* <Propss  time= "2 o clock"/>
- <Propss  time= "10 o clock"/>
- <Propss  time= "20 o clock"/> */}
+ {/* <Propsss time= "2 o clock"/> */}
+ {/* <Propsss time= "10 o clock"/>
+ <Propsss time= "20 o clock"/> */}
     </div>
   );
 }

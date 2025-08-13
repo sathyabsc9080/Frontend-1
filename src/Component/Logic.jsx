@@ -1,45 +1,51 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
 
 const Logic = () => {
-// const themeContext = React.createContext("light");
-const[data, setData]= useState(null);
-const[error, setError]= useState(null);
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-useEffect(()=>{
-loadData();
-},[])
+  useEffect(() => {
+    getloadData();
+    
+    // eslint-disable-next-line
+  }, []);
 
-    const loadData = async() =>{
-      try{
-        const response = await fetch("http");
-        if(!response.ok){
-          throw new Error("")
-        }
-        const result = await response.json();
-        setData(result.results[0]);
+  const getloadData = async () => {
+    try {
+      const response = await fetch("https://jsonplaceholder.typicode.com/users");
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      catch{
-        setError(error.message);
-      }
-    };
+      const result = await response.json();
+      setData(result);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
+ 
   return (
     <div>
-      <h2> User Data</h2>
-      {data&&(
+      <h3>User Data</h3>
+      {loading && <div>Loading...</div>}
+      {error && <div style={{ color: 'red' }}>Error: {error}</div>}
+      {data && !error && Array.isArray(data) && (
         <div>
-
-        <p> Name : {data.name.first}</p>
-        <p>Email :{data.email}</p>
-        <p>Location : {data.location.city}</p>
+          <ul>
+            {data.map(user => (
+              <li key={user.id}>
+                <strong>{user.name}</strong> - {user.email} - {user.address.city}
+              </li>
+            ))}
+          </ul>
         </div>
-
-
-
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Logic
+export default Logic;

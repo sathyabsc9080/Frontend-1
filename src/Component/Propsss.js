@@ -1,15 +1,15 @@
 import React from 'react'
 // child parent
-const Propss = (props) => {
+const Propsss = (props) => {
   return (
     <div>
         <h1> I love Television</h1>
-        <h2>I love to watch tv in this particular =  {props.time} </h2>
+        <h2>I love to watch tv in this particular =  {props.ball} </h2>
     </div>
   )
 }
 
-export default Propss
+export default Propsss
 
 //props and state
 /************************************* */

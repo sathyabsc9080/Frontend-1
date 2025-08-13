@@ -5,14 +5,16 @@ import useInput from '../UseInput'; // Adjust the path if needed
 
 function Forms() {
   const [password, setPassword] = useState('');
-  const [userName, bindUserName, resetUserName] = useInput('');
+  const [userName, setUserName] = useState('');
 
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
-
+ const handleUserNameChange = (event) => {
+    setUserName(event.target.value);
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
     // Do something with the form data, like submitting to a server
@@ -29,7 +31,8 @@ function Forms() {
         <input
           type="text"
           name="username"
-          {...bindUserName}
+          value={userName}
+          onChange={handleUserNameChange}
         />
       </label>
       <br />
