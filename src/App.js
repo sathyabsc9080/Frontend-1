@@ -34,6 +34,7 @@ import LoanDeduction from './Dhiva/EmployeeSalery/LoanDeduction';
 import TaxDedutions from './Dhiva/EmployeeSalery/TaxDedutions';
 import Interview from './Dhiva/EmployeeSalery/Interview';
 import LoanCalculate from './Dhiva/EmployeeSalery/LoanCalculate';
+
 import UseState1 from './Component/UseState1';
 import MyComponent from './Component/MyComponent';
 import MyComponent2 from './Component/MyComponent2';
@@ -41,6 +42,18 @@ import Propss from './Component/Propsss';
 import Propsss from './Component/Propsss';
 import Login from './Component/Login';
 import Logic from './Component/Logic';
+
+import Palindrome from './Praveen/ReactJSX/Palindrome';
+import PalindromeChecker from "./sathya/PalindromeChecker";
+import PersonInfo from './sathya/PersonInfo';
+import ArrayOperation from './sathya/ArrayOperation';
+import SquareRootCalculator from'./sathya/SquareRootCalculator';
+import TriangleAreaCalculator from'./sathya/TriangleAreaCalculator';
+import VirtualDom from './sathya/VirtualDom';
+import ControlledInput from './sathya/ControlledInput';
+import UncontrolledInput from './sathya/UncontrolledInput';
+import CustomHook from './sathya/CustomHook';
+
 
 function App() {
   return (
@@ -70,17 +83,16 @@ function App() {
  <Route path='/tax' element={<TaxDedutions/>}/>
  <Route path='/inter' element={<Interview/>}/>
  <Route path='loanCal' element={<LoanCalculate/>}/>
- <Route path='/fun' element={<FunctionComponent/>}/>
- <Route path='/class' element={<ClassComponent/>}/>
-   <Route path='/abi' element={<LifeCycle/>}/> 
-  <Route path='/my' element={<MyComponent2/>}/>
-  <Route path='/propss' element={<Propsss/>}/>
-  <Route path='/mycom' element={<MyComponent/>}/>
-  <Route path='/forms' element={<Forms/>}/>
-    <Route path='/login' element={<Login/>}/>
-  <Route path='/logic' element={<Logic/>}/>
-
-
+   <Route path='/palin' element={<Palindrome/>}/>
+      <Route path='/pali' element={< PalindromeChecker/>}/>
+  <Route path='/person' element={< PersonInfo/>}/>
+  <Route path='/arrayoper' element={<ArrayOperation/>}/>
+   <Route path='/square' element={<SquareRootCalculator/>}/>
+   <Route path='/triangle' element={< TriangleAreaCalculator/>}/>
+   <Route path='/virtual' element={<VirtualDom/>}/>
+   <Route path='/control' element={<ControlledInput/>}/>
+   <Route path='/uncontrol' element={< UncontrolledInput/>}/>
+   <Route path='/custom' element={< CustomHook/>}/>
   {/* <Route path='/abc' element={<UseEffect/>}/>
  
   <Route path='/' element={<SignInEvent/>}/>
