@@ -44,6 +44,10 @@ import Login from './Component/Login';
 import Logic from './Component/Logic';
 
 import Palindrome from './Praveen/ReactJSX/Palindrome';
+import CustomHook from './Sathya/CustomHook';
+import CounterComponent from './Sathya/CounterComponent';
+import UserProfile from './Component/UserProfile';
+import { UserProvider } from './Context/UserContext';
 // import PalindromeChecker from "./sathya/PalindromeChecker";
 // import PersonInfo from './sathya/PersonInfo';
 // import ArrayOperation from './sathya/ArrayOperation';
@@ -52,12 +56,12 @@ import Palindrome from './Praveen/ReactJSX/Palindrome';
 // import VirtualDom from './sathya/VirtualDom';
 // import ControlledInput from './sathya/ControlledInput';
 // import UncontrolledInput from './sathya/UncontrolledInput';
-// import CustomHook from './sathya/CustomHook';
 
 
 function App() {
   return (
     <div className="App">
+      <UserProvider>
   <BrowserRouter>
  <Routes>
  <Route path='/array' element={<Array/>}/> 
@@ -87,7 +91,9 @@ function App() {
    <Route path='/palin' element={<Palindrome/>}/>
    <Route path='/logic' element={<Logic/>}/>
    <Route path='/login' element={<Login/>}/>
-   
+   <Route path='/custom' element={<CustomHook/>}/>
+   <Route path='/count' element={<CounterComponent/>}/>
+   <Route path='/userprofile' element={<UserProfile/>}/>
   
 
       {/* <Route path='/pali' element={< PalindromeChecker/>}/>
@@ -116,7 +122,8 @@ function App() {
   {/* <Route path='/forms' element={<Forms/>}/> */}
 
  </Routes>
- </BrowserRouter> 
+ </BrowserRouter>
+ </UserProvider>
  {/* <Propsss time= "2 o clock"/> */}
  {/* <Propsss time= "10 o clock"/>
  <Propsss time= "20 o clock"/> */}

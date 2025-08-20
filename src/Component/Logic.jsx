@@ -30,7 +30,7 @@ const Logic = () => {
  
   return (
    <div>
-  <h3  style={{ fontSize:"30px",color:"blue" , }}>User Data</h3>
+  <h3  style={{ fontSize:"30px",color:"blue" , }}><center>User Data</center></h3>
 
   {loading && <div>Loading...</div>}
   {error && <div style={{ color: 'red' }}>Error: {error}</div>}
