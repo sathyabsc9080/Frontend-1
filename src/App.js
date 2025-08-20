@@ -44,15 +44,15 @@ import Login from './Component/Login';
 import Logic from './Component/Logic';
 
 import Palindrome from './Praveen/ReactJSX/Palindrome';
-import PalindromeChecker from "./sathya/PalindromeChecker";
-import PersonInfo from './sathya/PersonInfo';
-import ArrayOperation from './sathya/ArrayOperation';
-import SquareRootCalculator from'./sathya/SquareRootCalculator';
-import TriangleAreaCalculator from'./sathya/TriangleAreaCalculator';
-import VirtualDom from './sathya/VirtualDom';
-import ControlledInput from './sathya/ControlledInput';
-import UncontrolledInput from './sathya/UncontrolledInput';
-import CustomHook from './sathya/CustomHook';
+// import PalindromeChecker from "./sathya/PalindromeChecker";
+// import PersonInfo from './sathya/PersonInfo';
+// import ArrayOperation from './sathya/ArrayOperation';
+// import SquareRootCalculator from'./sathya/SquareRootCalculator';
+// import TriangleAreaCalculator from'./sathya/TriangleAreaCalculator';
+// import VirtualDom from './sathya/VirtualDom';
+// import ControlledInput from './sathya/ControlledInput';
+// import UncontrolledInput from './sathya/UncontrolledInput';
+// import CustomHook from './sathya/CustomHook';
 
 
 function App() {
@@ -75,6 +75,7 @@ function App() {
  <Route path='/api' element={<ApiCall/>}/>
  <Route path='/main' element={<Main/>}/>
  <Route path='/container' element={<Container/>}/>
+ 
  <Route path='/users' element={<Users/>}/>
  <Route path='/user' element={<User/>}/>
  <Route path='/employee' element={<Employee/>}/>
@@ -84,7 +85,12 @@ function App() {
  <Route path='/inter' element={<Interview/>}/>
  <Route path='loanCal' element={<LoanCalculate/>}/>
    <Route path='/palin' element={<Palindrome/>}/>
-      <Route path='/pali' element={< PalindromeChecker/>}/>
+   <Route path='/logic' element={<Logic/>}/>
+   <Route path='/login' element={<Login/>}/>
+   
+  
+
+      {/* <Route path='/pali' element={< PalindromeChecker/>}/>
   <Route path='/person' element={< PersonInfo/>}/>
   <Route path='/arrayoper' element={<ArrayOperation/>}/>
    <Route path='/square' element={<SquareRootCalculator/>}/>
@@ -92,7 +98,7 @@ function App() {
    <Route path='/virtual' element={<VirtualDom/>}/>
    <Route path='/control' element={<ControlledInput/>}/>
    <Route path='/uncontrol' element={< UncontrolledInput/>}/>
-   <Route path='/custom' element={< CustomHook/>}/>
+   <Route path='/custom' element={< CustomHook/>}/> */}
   {/* <Route path='/abc' element={<UseEffect/>}/>
  
   <Route path='/' element={<SignInEvent/>}/>
